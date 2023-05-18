@@ -16,3 +16,4 @@ Keywords:
 12. Concurrency is a property of systems in which several tasks are executing in overlapping time intervals.
 13. mut - to make a variable mutable
 14. const VARIABLE_NAME:dataType = value; - syntax to declare a constant. Const declaration must declare a datatype unlike variables where it's optional. Always Immutable, not mut option. Should always be named in capitals.
+15. Rust allows programmers to declare variables with the same name. In such a case, the new variable overrides the previous variable.
