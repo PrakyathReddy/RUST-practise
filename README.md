@@ -17,3 +17,20 @@ Keywords:
 13. mut - to make a variable mutable
 14. const VARIABLE_NAME:dataType = value; - syntax to declare a constant. Const declaration must declare a datatype unlike variables where it's optional. Always Immutable, not mut option. Should always be named in capitals.
 15. Rust allows programmers to declare variables with the same name. In such a case, the new variable overrides the previous variable.
+
+Cargo Commands
+Here is a list of commonly utilized cargo commands and their purpose.
+
+cargo new # Create a new binary executable crate
+cargo new --lib # Create a new library crate
+
+cargo build # Compiles our crate
+cargo build --release # Compiles our crate with optimizations
+cargo run # Compiles our crate and runs the compiled executable
+
+cargo test # Run all tests in a crate
+cargo doc --open # Build and open our crate's documentation in a web browser
+cargo clean # Cleans up temporary files created during compilation
+cargo publish # Publishes your crate to `crates.io`
+
+cargo install # Installs a binary directly from crates.io
