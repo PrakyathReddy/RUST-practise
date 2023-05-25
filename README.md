@@ -18,6 +18,7 @@ Keywords:
 14. const VARIABLE_NAME:dataType = value; - syntax to declare a constant. Const declaration must declare a datatype unlike variables where it's optional. Always Immutable, not mut option. Should always be named in capitals.
 15. Rust allows programmers to declare variables with the same name. In such a case, the new variable overrides the previous variable.
 16. Difference between print and println - println adds a new line at the end
+17. Use & whenever referencing
 
 Cargo Commands
 Here is a list of commonly utilized cargo commands and their purpose.
