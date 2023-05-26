@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["fizzbuzz","is_divisible","main","print_fizzbuzz_to"]};

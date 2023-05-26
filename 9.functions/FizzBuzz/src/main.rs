@@ -9,6 +9,9 @@ fn is_divisible(n: u32, divisor: u32) -> bool {
     n % divisor == 0
 }
 
+///Determine if the first argument is divisible by the second argument
+///
+///If the second argument is zero, the result is false
 fn fizzbuzz(n: u32) -> String {
     let fizz = if is_divisible(n,3) {
         "fizz"
