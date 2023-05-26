@@ -23,6 +23,7 @@ Keywords:
 19. &str an immutable reference to a string slice. String a mutable string buffer.
 20. In Rust, the -> operator is used to denote the return type of a function.
 21. To generate documentation for a Rust package, you can use the cargo doc command, which is a wrapper around rustdoc. The contents are treated as Markdown.
+22. impl is a keyword used to define methods associated with a particular struct or enum (or to provide an implementation of a trait for a particular type). Example:impl Rectangle begins an implementation block for the Rectangle struct.
 
 Cargo Commands
 Here is a list of commonly utilized cargo commands and their purpose.
