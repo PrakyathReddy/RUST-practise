@@ -19,6 +19,8 @@ Keywords:
 15. Rust allows programmers to declare variables with the same name. In such a case, the new variable overrides the previous variable.
 16. Difference between print and println - println adds a new line at the end
 17. Use & whenever referencing
+18. String::from("Hello World"): This is a static method call. The :: syntax is used to call associated functions on a type. An associated function is a function that is associated with a type, rather than an instance of a type. In other languages, these might be called static methods. In this case, from is a function associated with the String type, and it takes a string literal (&str) and converts it to an instance of String.
+19. &str an immutable reference to a string slice. String a mutable string buffer.
 
 Cargo Commands
 Here is a list of commonly utilized cargo commands and their purpose.
