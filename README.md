@@ -21,6 +21,7 @@ Keywords:
 17. Use & whenever referencing
 18. String::from("Hello World"): This is a static method call. The :: syntax is used to call associated functions on a type. An associated function is a function that is associated with a type, rather than an instance of a type. In other languages, these might be called static methods. In this case, from is a function associated with the String type, and it takes a string literal (&str) and converts it to an instance of String.
 19. &str an immutable reference to a string slice. String a mutable string buffer.
+20. In Rust, the -> operator is used to denote the return type of a function.
 
 Cargo Commands
 Here is a list of commonly utilized cargo commands and their purpose.
