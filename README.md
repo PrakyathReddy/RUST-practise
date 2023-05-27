@@ -15,7 +15,7 @@ Keywords:
 11. By default, variables are immutable − read only in Rust. In other words, the variable's value cannot be changed once a value is bound to a variable name.
 12. Concurrency is a property of systems in which several tasks are executing in overlapping time intervals.
 13. mut - to make a variable mutable
-14. const VARIABLE_NAME:dataType = value; - syntax to declare a constant. Const declaration must declare a datatype unlike variables where it's optional. Always Immutable, not mut option. Should always be named in capitals.
+14. const VARIABLE_NAME:dataType = value; - syntax to declare a constant. Const declaration must declare a datatype unlike variables where it's optional. Always Immutable, not mut option. Should always be named in screaming snake capitals. Same with static variables. Both can be declared in any scope including the global scope outside the main function. Unlike const, static variables can be marked mutable.
 15. Rust allows programmers to declare variables with the same name. In such a case, the new variable overrides the previous variable.
 16. Difference between print and println - println adds a new line at the end
 17. Use & whenever referencing
