@@ -1,14 +1,24 @@
 fn main() {
     let s1: String = String::from("Rust"); //heap allocated string
-    let s2: String = s1;
-    let s3: String = s2.clone();
-    println!("{s2}");
-    println!("{s3}");
+    let s2: String = s1.clone();
+    print_string(s1.clone());
+    println!("s1 is {s1}");
+    let s4 = add_to_string(s2);
+    println!("s4 is {s4}");
+
+    let s3: String = generate_string();
+    println!("s3 is {s3}");
 
     let x: i32 = 10;
-    let y: i32 = x;
+    let _y: i32 = x;
     println!("{x}");
+
+    print_integer(x);
+    println!("x is {x}");
+
+
 } //s1 will be dropped
+  //s3 will be dropped
 
 /*
 Ownership: A strategy for managing memory (and other resources) through a set of rules checked at compile time.
@@ -56,3 +66,32 @@ entirely stored on the stack such as integers, floating point numbers, booleans
 or characters are cloned by default. These types are cheap to clone, so there's no
 material difference between cloning and moving the values.
  */
+
+// Let's see how ownership can be moved to a function
+fn print_string(p1: String) {
+    println!("{p1}");
+}
+
+/*
+Passing a variable into a function has the same effect as assigning one variable
+to another variable.
+Ownership of s1 is now moved to function print_string.
+At the end of print_string function, p1 will be dropped, so the cloned string will
+be cleaned.
+ */
+
+// Let's see how ownership can be moved out of functions
+fn generate_string() -> String {
+    String::from("Ferris")
+}
+
+// Let's see how functions can take ownership and give it back
+fn add_to_string(mut p1: String) -> String {
+    p1.push_str(" is awesome");
+    p1
+}
+
+// Stack-only data-types
+fn print_integer(i: i32) {
+    println!("i is {i}");
+}
