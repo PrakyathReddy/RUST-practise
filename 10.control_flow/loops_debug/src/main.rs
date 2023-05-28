@@ -49,3 +49,8 @@ fn get_prime(arr: [i32; 7]) -> i32 {
     println!("The first prime number in the array is {}.", arr[i]);
     arr[i]
 }
+
+//this is a line comment
+/*
+ *this is a block comment
+ */
