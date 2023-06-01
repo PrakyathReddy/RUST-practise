@@ -11,6 +11,7 @@ fn main() {
     let tweet: String = String::from(
         "This is my tweet and it's very long"
     );
+
     let trimmed_tweet: &str = trim_tweet(&tweet); //String slice
     // although tweet is String and trim_tweet is expecting &str, it still works
     // because of a feature in rust called deref coercion. When we call a trim_tweet

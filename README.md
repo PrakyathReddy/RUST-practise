@@ -25,6 +25,7 @@ Keywords:
 21. To generate documentation for a Rust package, you can use the cargo doc command, which is a wrapper around rustdoc. The contents are treated as Markdown.
 22. impl is a keyword used to define methods associated with a particular struct or enum (or to provide an implementation of a trait for a particular type). Example:impl Rectangle begins an implementation block for the Rectangle struct.
 23. In Rust the final expression in a function will be used as a return value. Expressions are things that evaluate to a return value, whereas statements are instructions that do not return a value.
+24.
 
 Cargo Commands
 Here is a list of commonly utilized cargo commands and their purpose.
