@@ -5,6 +5,7 @@ fn main() {
     println!("{bool_val}");
     println!("1st index: {}", t.0);
 
+    // struct types
     struct _User {
         name: String,
         age: i32,   

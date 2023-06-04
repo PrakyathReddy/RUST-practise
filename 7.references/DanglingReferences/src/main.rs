@@ -5,4 +5,6 @@ fn main() {
         ref_x = &x;
     }
     println!("ref_x = {}", ref_x);
+
+    
 }
