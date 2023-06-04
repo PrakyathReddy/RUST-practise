@@ -4,5 +4,5 @@ fn main() {
         let x: i32 = 10;
         ref_x = &x;
     }
-    println!("ref_x = {ref_x}");
+    println!("ref_x = {}", ref_x);
 }

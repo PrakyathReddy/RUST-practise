@@ -4,4 +4,9 @@ fn main() {
     let bool_val = t.1;
     println!("{bool_val}");
     println!("1st index: {}", t.0);
+
+    struct _User {
+        name: String,
+        age: i32,   
+    }
 }
