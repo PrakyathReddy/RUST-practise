@@ -18,6 +18,12 @@ fn inspect(event: WebEvent) {
     }
 }
 
+enum fruit {
+    apple,
+    orange,
+    grapes
+}
+
 fn main() {
     let pressed = WebEvent::KeyPress('x');
     let pasted = WebEvent::Paste("my text".to_owned());
