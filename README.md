@@ -29,18 +29,46 @@ Keywords:
     the value.
 
 Cargo Commands
-Here is a list of commonly utilized cargo commands and their purpose.
-
-cargo new # Create a new binary executable crate
-cargo new --lib # Create a new library crate
-
-cargo build # Compiles our crate
-cargo build --release # Compiles our crate with optimizations
-cargo run # Compiles our crate and runs the compiled executable
-
-cargo test # Run all tests in a crate
-cargo doc --open # Build and open our crate's documentation in a web browser
-cargo clean # Cleans up temporary files created during compilation
-cargo publish # Publishes your crate to `crates.io`
-
+Some common cargo commands are (see all commands with --list):
+build, b Compile the current package
+check, c Analyse the current package and report errors, but don't build object files
+clean Remove the target directory
+doc, d Build this package's and its dependencies' documentation
+new Create a new cargo package
+init Create a new cargo package in an existing directory
+add Add dependencies to a manifest file
+run, r Run a binary or example of the local package
+test, t Run the tests
+bench Run the benchmarks
+update Update dependencies listed in Cargo.lock
+search Search registry for crates
+publish Package and upload this package to the registry
+install Install a Rust binary. Default location is $HOME/.cargo/bin
+uninstall Uninstall a Rust binary
+See 'cargo help ' for more information on a specific command
 cargo install # Installs a binary directly from crates.io
+
+Create a keypair
+mkdir ~/my-solana-wallet
+solana-keygen new --outfile ~/my-solana-wallet/my-keypair.json
+display the result with
+solana-keygen pubkey ~/my-solana-wallet/my-keypair.json
+verify your address
+solana-keygen verify <PUBKEY> ~/my-solana-wallet/my-keypair.json
+
+Connect to the dev network
+solana config set --url https://api.devnet.solana.com
+You can check the configuration with
+solana config get
+Get some tokens from dev net
+solana airdrop 1 <RECIPIENT_ACCOUNT_ADDRESS> --url https://api.devnet.solana.com
+you will receive the transaction ID, and can look for this on the dev net block explorer
+You can also check your balance with
+solana balance <ACCOUNT_ADDRESS> --url https://api.devnet.solana.com
+See Docs
+Note that you need to use the file system wallet we set up yesterday.
+In the following <KEYPAIR> is the path to that wallet.
+
+Transferring SOL to another account
+solana transfer --from <KEYPAIR> <RECIPIENT_ACCOUNT_ADDRESS> <AMOUNT> --fee-payer
+<KEYPAIR>
