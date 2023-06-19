@@ -1,0 +1,1 @@
+/Users/praky/Projects/RUST-practise/19.package-crates-modules/backyard/target/debug/backyard: /Users/praky/Projects/RUST-practise/19.package-crates-modules/backyard/src/garden/vegetables.rs /Users/praky/Projects/RUST-practise/19.package-crates-modules/backyard/src/garden.rs /Users/praky/Projects/RUST-practise/19.package-crates-modules/backyard/src/main.rs
