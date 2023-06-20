@@ -1,0 +1,1 @@
+/Users/praky/Projects/RUST-practise/23.error_handling/panic_call_from_library/target/debug/panic_call_from_library: /Users/praky/Projects/RUST-practise/23.error_handling/panic_call_from_library/src/main.rs
