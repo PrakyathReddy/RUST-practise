@@ -21,4 +21,14 @@ fn main() {
         Some(fourth) => println!("The fourth value is {}", fourth),
         None => println!("The fourth value in None"),
     }
+
+    for i in &v4 {
+        println!("{i}");
+    }
+
+    println!("{:?}", v3);
+    for i in &mut v3 {
+        *i += 50;
+    }
+    println!("{:?}", v3);
 }
