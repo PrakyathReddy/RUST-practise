@@ -1,18 +1,12 @@
-#![allow(unused)]
-fn main() {
-    struct Sequence3<T> {
-        first: T,
-        second: T,
-        third: T,
-    }
+struct Point<T> {
+    x: T,
+    y: T,
+}
 
-    impl<T> Sequence3<T> {
-        pub fn new(first: T, second: T, third: T) -> Self {
-            Self {
-                first,
-                second,
-                third,
-            }
-        }
-    }
+fn main() {
+    let a = Point {x: 2, y: 3};
+    println!("x={}, y={}", a.x, a.y);
+
+    let b = Point {x: String::from("one"), y: String::from("two")};
+    println!("x: {}, y: {}", b.x, b.y);
 }
