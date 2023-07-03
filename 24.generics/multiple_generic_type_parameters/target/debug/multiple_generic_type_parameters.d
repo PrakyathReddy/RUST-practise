@@ -1,0 +1,1 @@
+/Users/praky/Projects/RUST-practise/24.generics/multiple_generic_type_parameters/target/debug/multiple_generic_type_parameters: /Users/praky/Projects/RUST-practise/24.generics/multiple_generic_type_parameters/src/main.rs
