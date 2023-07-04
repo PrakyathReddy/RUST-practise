@@ -1,0 +1,1 @@
+/Users/praky/Projects/RUST-practise/26.macros/multiple_trait_implementations/target/debug/multiple_trait_implementations: /Users/praky/Projects/RUST-practise/26.macros/multiple_trait_implementations/src/main.rs
