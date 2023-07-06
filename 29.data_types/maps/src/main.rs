@@ -15,12 +15,10 @@ fn main() {
         },
     ];
 
-    println!(
-        "{:?}",
-        users
-            .iter()
-            .find(|profile| profile.name == "Mick")
-            .unwrap()
-            .age
-    );
+    let name_to_profile: std::collections::HashMap<String, UserProfile> = users
+        .into_iter()
+        .map(|profile| (profile.name.clone(), profile))
+        .collect();
+
+    println!("{:?}", name_to_profile["Mick"].age);
 }
