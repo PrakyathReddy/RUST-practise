@@ -1,0 +1,1 @@
+/Users/praky/Projects/RUST-practise/25.traits/conversion/display_fromstring_tostring/target/debug/display_fromstring_tostring: /Users/praky/Projects/RUST-practise/25.traits/conversion/display_fromstring_tostring/src/main.rs
