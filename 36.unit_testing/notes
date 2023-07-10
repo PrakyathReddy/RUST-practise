@@ -1,0 +1,29 @@
+Setting up a unit test in Rust is very simple: just add a function annotated with #[test]
+and run
+'cargo test'
+
+1️⃣ The #[cfg(test)]
+annotation tells the compiler only to include the code in the following item (which is a module named tests) when the feature flag test is enabled.
+
+2️⃣Cargo allows you to define your feature flags in the
+Cargo.toml
+if you wanted to.
+
+3️⃣ The
+test
+feature flag automatically gets enabled when
+cargo test
+runs, making the code compile the contents of the
+tests
+module. A normal
+cargo build
+will not include the code in the
+tests
+module.
+
+It is good to realize that it is possible to omit the #[cfg(test)]
+annotation entirely if desired. However, that would make the binary include the testing code, which is probably unnecessary.
+
+It is also good to realize that the module's name can be anything you wish, but it is usually named
+tests
+by convention. If you need functionality in your tests but do not need it as part of the public API of your module, then you can implement the testing functionality within the test's module.

@@ -1,0 +1,17 @@
+3 ways to connect to an external crate in the [dependencies] section in cargo.toml file:
+
+1. Using version
+[dependencies]
+time = "0.3"
+You have connected the crate "time" version 0.3. In this case, cargo may use a younger version but less than 1.0.0.
+
+2. Using git 
+[dependencies]
+time = { git = "https://github.com/time-rs/time.git" }
+
+3. from local path
+[dependencies]
+time = { path = "../time" }
+
+
+
