@@ -1,0 +1,22 @@
+By default, 
+cargo test
+ looks for integration tests in the 
+tests/
+ directory of your project. Every Rust source file directly under tests/ is compiled as a separate crate, and any function annotated with 
+#[test]
+ will be run as an integration test. Because the integration tests are compiled as separate crates, you can only access the public interface of the crate under the test.
+
+Adding Integration Tests
+Generate a new library with 
+cargo new --lib integration-test-demo
+Then create the folder 
+tests/
+ and the file 
+tests/my_integration_test.rs
+
+Sharing Testing Code
+Sometimes it can be helpful to split your integration tests over multiple files. When doing so, some common test setup code might need to be shared. If you want to share the testing code, one option is to add a module in the 
+tests/
+ directory.
+📌 To avoid having this shared module interpreted as an integration test source file, you can create this module as a directory containing a 
+mod.rs.
