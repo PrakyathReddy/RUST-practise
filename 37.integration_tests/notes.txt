@@ -20,3 +20,53 @@ tests/
  directory.
 📌 To avoid having this shared module interpreted as an integration test source file, you can create this module as a directory containing a 
 mod.rs.
+
+TEST OPTIONS
+
+As 
+cargo run
+ compiles your code and then runs the resulting binary, 
+cargo test
+ compiles your code in test mode and runs the resulting test binary. The default behavior of the binary produced by cargo test is to run all the tests in parallel and capture output generated during test runs, preventing the output from being displayed and making it easier to read the output related to the test results. You can, however, specify command line options to change this default behavior.
+
+1. showing stdout output 
+By default, 
+cargo test
+ hides any output written to 
+stdout
+ by tests so that the test rapport looks clean.
+To disable this behavior and reveal the output, run 
+cargo test -- --show-output
+
+2. Filtering Tests By Name
+☝️ It is possible to only run a subset of all tests by passing a string to 
+cargo test <TESTNAME>
+Only tests that contain the 
+<TESTNAME>
+ string in their fully qualified path will be running. All tests that do not contain the string will not be run, but their count will be displayed as 
+filtered out
+ in the test output.
+
+3. Ignoring Tests
+The default testing framework will run every test function unless annotated with 
+#[ignore]
+If you have to disable a test for some reason, using the 
+#[ignore]
+ attribute is often better than uncommenting the test function entirely. Unlike uncommented code, ignored tests appear in the test output and can be checked for correctness by the compiler, linters, formatters, and other tools.
+📌 You can run only the ignored tests with 
+cargo test -- --ignored
+You can run all tests, ignored or not, with 
+cargo test -- --include-ignored
+
+4. Running Tests Sequentially
+By default, 
+cargo test
+ runs all tests in parallel. This works when each test is entirely independent. Sometimes, tests must share some resources that cannot be duplicated. You can make the tests execute one by one with 
+cargo test -- --test-threads=1
+💡 However, a better solution is probably to put the shared resource behind a shared lock. As of 2022, this is best achieved through the 
+lazy_static
+ crate and a 
+std::sync::Mutex
+although work is being done to bring the functionality of 
+lazy_static
+ to the standard library.
